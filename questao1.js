@@ -1,27 +1,19 @@
-export class Vertice{
-    constructor(x, y){
-        this.x = x;
-        this.y = y;
-    }
+import promptSync from 'prompt-sync';
+const readline = promptSync();
+
+import { Vertice } from "./classes/Vertice.js"
 
 
-    distancia(v){
-        return Math.sqrt(Math.pow(this.x - v.x, 2) + Math.pow(this.y - v.y, 2));
-    }
+let x1 = parseFloat(readline('Digite o valor de x1: '));
+let y1 = parseFloat(readline('Digite o valor de y1: '));
+let x2 = parseFloat(readline('Digite o valor de x2: '));
+let y2 = parseFloat(readline('Digite o valor de y2: '));
+let x3 = parseFloat(readline('Digite o valor de x3: '));
+let y3 = parseFloat(readline('Digite o valor de y3: '));
 
-    move(){
-        this.x += 1;
-        this.y += 1;
-    }
-
-    equals(v2){
-        return this.x == v2.x && this.y == v2.y;
-    }
-}
-
-let v1 = new Vertice(1,1);
-let v2 = new Vertice(2,2);
-let v3 = new Vertice(3,3);
+let v1 = new Vertice(x1, y1);
+let v2 = new Vertice(x2, y2);
+let v3 = new Vertice(x3, y3);
 
 console.log(v1.distancia(v2));
 v1.move();

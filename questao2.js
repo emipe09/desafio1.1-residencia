@@ -1,6 +1,8 @@
-//importar classe vertice
 
-import { Vertice } from "./questao1.js"
+import promptSync from 'prompt-sync';
+const readline = promptSync();
+
+import { Vertice } from "./classes/Vertice.js"
 class Triangulo{
     constructor(v1, v2, v3){
         this.v1 = v1;
@@ -47,10 +49,16 @@ class Triangulo{
     }
 }
 
-let v1 = new Vertice(0,0);
-let v2 = new Vertice(1,1);
-let v3 = new Vertice(0,1);
+let x1 = parseFloat(readline('Digite o valor de x1: '));
+let y1 = parseFloat(readline('Digite o valor de y1: '));
+let x2 = parseFloat(readline('Digite o valor de x2: '));
+let y2 = parseFloat(readline('Digite o valor de y2: '));
+let x3 = parseFloat(readline('Digite o valor de x3: '));
+let y3 = parseFloat(readline('Digite o valor de y3: '));
 
+let v1 = new Vertice(x1, y1);
+let v2 = new Vertice(x2, y2);
+let v3 = new Vertice(x3, y3);
 
 let t1 = new Triangulo(v1, v2, v3);
 let t2 = new Triangulo(v1, v2, v3);
